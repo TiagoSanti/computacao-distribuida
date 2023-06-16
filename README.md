@@ -1,6 +1,6 @@
 # Análise de Dados de Exportação e Importação do Brasil
-Este projeto utiliza PySpark para analisar dados de exportação e importação do Brasil.
-As análises são realizadas em um ambiente de processamento distribuído no Google Cloud Dataproc e os resultados são salvos no Google Cloud Storage e no BigQuery.
+Este projeto utiliza PySpark para analisar dados de exportação e importação do Brasil, disponibilizados em sua [página do Kaggle](https://www.kaggle.com/datasets/daniellecd/dados-de-exportao-e-importao-do-brasil).
+As análises são realizadas em um ambiente de processamento distribuído no Google Cloud Dataproc, os resultados são salvos no Google Cloud Storage e no BigQuery, e são visualizadas no [Looker Studio](https://lookerstudio.google.com/reporting/ae5a333c-5251-4bb4-9a22-68448a5586a9).
 Abaixo está a descrição dos passos realizados no código.
 
 ## Pré-requisitos
@@ -160,3 +160,6 @@ def save_bigquery(df, table_name):
 
     print(f"{table_name} loaded to BigQuery!\n")
 ```
+
+## Apresentação das Análises
+As análises resultantes salvas em tabelas do BigQuery são conectadas no Looker Studio e lá representadas por gráficos de barras, geográficos e lineares em suas [páginas](https://lookerstudio.google.com/reporting/ae5a333c-5251-4bb4-9a22-68448a5586a9).
