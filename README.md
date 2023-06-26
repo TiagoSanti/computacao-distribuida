@@ -112,7 +112,7 @@ df_region_exports.show(5)
 save_results(df_region_exports, 'regions-exp')
 ```
 
-### Análise 8: As região com maior valor FOB total de importação ao longo do tempo
+### Análise 8: A região com maior valor FOB total de importação ao longo do tempo
 ``` python
 windowSpec = Window.partitionBy('CO_ANO').orderBy(F.desc('Total Imports'))
 df_region_imports = dfs['IMP_COMPLETA.csv'].groupBy('CO_ANO','SG_UF_NCM').agg(F.sum('VL_FOB').alias('Total Imports')).withColumn('rank', F.rank().over(windowSpec))
